@@ -1,0 +1,28 @@
+{% extends "base_layout.html" %}
+
+{% block title %}
+  Main Index
+{% endblock %}
+    
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h1>Hola Mundo,
+          <!-- The current_user variable is defined by Flask-Login and is automatically available to view functions and templates -->
+          {% if current_user.is_authenticated() %}
+            {{ current_user.username }}!
+          {% else %}
+              Stranger!
+          {% endif %}
+        </h1>
+        <h2>It's now {{ current_time }}</h2>
+    </div>
+
+    <button type="button" class="btn btn-default" aria-label="Left Align">
+        <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+    </button>
+
+{% endblock %}
