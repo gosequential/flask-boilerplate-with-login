@@ -11,7 +11,7 @@ def make_shell_context():
     return dict(app=app)
 
 manager.add_command("shell", Shell(make_context=make_shell_context))
-manager.add_command("runserver", Server(host="0.0.0.0", port=5000))
+manager.add_command("runserver", Server(host="0.0.0.0", port=5001, threaded=True))
 
 @manager.command
 def test():
