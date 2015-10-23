@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 import os
 from flask.ext.script import Manager, Shell, Server
-
 from app import create_app
 
 app = create_app(os.getenv('FLASK_CONFIG') or 'default') 
