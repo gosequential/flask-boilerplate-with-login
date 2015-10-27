@@ -1,0 +1,244 @@
+/*=========================================================
+    General Page Settings
+=========================================================*/
+
+body {
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+    -moz-osx-font-smoothing: grayscale; /* Allows certain fonts to match in appearance across Firefox and Chrome (OSX specific) */
+}
+
+.limebox {
+    border: thin solid lime;
+}
+
+.redbox {
+    border: thin solid red;
+}
+
+.upper25 {
+  padding-top: 25px;
+}
+
+.upper35 {
+  padding-top: 35px;
+}
+
+a,
+a:link,
+a:active,
+a:visited {
+    outline: 0; /* Remove dotted borders */
+}
+
+/*=========================================================
+    Top of the Stack Media Queries
+=========================================================*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+    
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+
+/*=========================================================
+    Header / Navigation
+=========================================================*/
+
+#header {
+    height: 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 999;
+    min-width: 100%;
+    background-color: rgba(30, 30, 30, 0.75);
+    -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+}
+
+
+/*=========================================================
+    Splash
+=========================================================*/
+
+#splash {
+    background: #101010 url("/static/img/splash_waterfront_xs.jpg") no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    height: 667px;
+}
+
+
+/*==================== Media Queries ====================*/
+
+@media only screen and (min-width : 480px) {
+  #splash {
+    background: #101010 url("/static/img/splash_waterfront.jpg") no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+    #splash {
+      background: #101010 url("/static/img/splash_waterfront.jpg") no-repeat center center; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      height: 734px;
+      padding-top: 100px;
+    }
+
+    .splash-h1 {
+      text-align: center;
+      font-size: 70px;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 3px 3px 4px #121212;
+    }
+
+    .splash-h2 {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 600;
+      color: #5ed1da;
+      line-height: 36px;
+      margin-top: 35px auto 0;
+      padding: 0 75px;
+      text-shadow: 3px 3px 4px #121212;
+    }
+
+    #splash h3 {
+        width: 315px;
+        font-size: 24px;
+        font-weight: 400;
+        color: #fff;
+        padding: 8px 20px;
+        background-color: #4667a4;
+    }
+
+    #splash-headline {
+      margin-top: 60px;
+    }
+
+    .splashOverlay {
+        margin: 100px 0 0 0;
+    }
+
+    .rowWidth1000 {
+        width: 1000px;
+        margin: 0 auto;
+    }
+}
+
+
+/*=========================================================
+    General Content
+=========================================================*/
+
+#content {
+    text-align: center;
+    margin-top: 0;
+}
+
+@media only screen and (min-width : 992px) {
+  #content {
+      text-align: center;
+      margin-top: 125px;
+  }
+}
+
+.body-content {
+  background-color: #ffffff;
+}
+
+
+/*=========================================================
+    Footer
+=========================================================*/
+
+.footer {
+  background-color: #404040;
+  font-family: 'Open Sans', sans-serif;
+  color: #eaeaea;
+}
+
+.footer h1 {
+  margin: 20px 0 0 0;
+  font-size: 42px;
+  font-weight: 600;
+  color: #ccff66;
+  text-align: center;
+}
+
+.footer h2 {
+  margin: 25px 0 0 0;
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+/****************************************************************
+   CSS - Error Pages
+****************************************************************/
+
+.error-page {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  margin: 180px 0 80px;
+}
+
+.error-page h1 {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.error-page h2 {
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.error-page p {
+  margin-top: 25px;
+}
+
+
+/****************************************************************
+   CSS - Secondary Pages
+****************************************************************/
+
+.page-layout-sec {
+  background: #ff0 url('/static/img/bg-sec.png') repeat-x;
+}
+
+.secondary-page-layout {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  margin: 180px 0 80px;
+}
+
+
