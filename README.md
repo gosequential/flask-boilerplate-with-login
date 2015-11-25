@@ -1,9 +1,8 @@
 # flask-boilerplate-with-login
-Initialized June 1, 2015<br>
+###Initialized June 1, 2015
 
 A convenient framework to get up and running fast with Flask. Login capability has been rolled in. Comes configured with **Flask-SQLAlchemy**, **Flask-WTF**, **Flask-Login**, and **Bootstrap**.
 
-<hr>
 
 Project Structure
 --------
