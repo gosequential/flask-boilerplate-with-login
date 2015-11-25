@@ -5,7 +5,7 @@ A convenient framework to get up and running fast with Flask. Login capability h
 
 
 Project Structure
---------
+-----------------
 
   ```
   ├── README.md
