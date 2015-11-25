@@ -1,7 +1,7 @@
 {% extends "base_layout.html" %}
 
 {% block title %}
-  Main Index
+  Datapir
 {% endblock %}
     
 {% block head %}
@@ -9,20 +9,33 @@
 {% endblock %}
 
 {% block body %}
-    <div>
-        <h1>Hola Mundo,
-          <!-- The current_user variable is defined by Flask-Login and is automatically available to view functions and templates -->
-          {% if current_user.is_authenticated() %}
-            {{ current_user.username }}!
-          {% else %}
-              Stranger!
-          {% endif %}
-        </h1>
-        <h2>It's now {{ current_time }}</h2>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="logo"><img src="/static/img/logo-lg.png" class="img-responsive"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="message">
+          <p>Datapir, revolutionizing how you collect and access data. <em>Sign up today for early access:</em></p>
+        </div>
+        
+        <div class="beta-request-form">
+          <form action="/beta_registration" method="POST" class="form-inline" accept-charset="UTF-8">
+            <div class="form-group">
+              {{ form.csrf_token }}
+              {{ form.email(id='email-field', class_="form-control", placeholder="email@example.com") }}
+            </div>
+            {{ form.submit(class_="btn btn-primary btn-default") }}
+          </form>
+
+        </div>
+
+      </div>
     </div>
 
-    <button type="button" class="btn btn-default" aria-label="Left Align">
-        <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
-    </button>
+  </div>
 
 {% endblock %}

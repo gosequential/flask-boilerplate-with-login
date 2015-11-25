@@ -3,7 +3,9 @@
 =========================================================*/
 
 body {
-    background: #ffffff;
+    background: #31383b;
+    background-image: url("/static/img/bg-beta.jpg");
+    background-repeat: repeat-x;
     -webkit-font-smoothing: antialiased;
     font-weight: normal;
     -moz-osx-font-smoothing: grayscale; /* Allows certain fonts to match in appearance across Firefox and Chrome (OSX specific) */
@@ -171,6 +173,50 @@ a:visited {
       text-align: center;
       margin-top: 125px;
   }
+}
+
+.logo img {
+  display: block;
+  margin: 175px auto 0;
+}
+
+@media only screen and (min-width : 480px) {
+  .logo img {
+    display: block;
+    margin: 140px auto 0;
+  }
+}
+
+@media only screen and (min-width : 740px) {
+  .logo img {
+    display: block;
+    margin: 125px auto 0;
+  }
+}
+
+.message p {
+  font-family: 'Open Sans', Arial, Verdana, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #979797;
+  margin: 90px 0 0 0;
+  padding: 0 40px;
+  text-shadow: 2px 2px 3px #000000;
+}
+
+.welcome p {
+  font-family: 'Open Sans', Arial, Verdana, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #979797;
+  margin: 40px 0 0 0;
+  padding: 0 40px;
+  text-shadow: 2px 2px 3px #000000;
+}
+
+.beta-request-form {
+  text-align: center;
+  margin: 35px auto 0;
 }
 
 .body-content {
