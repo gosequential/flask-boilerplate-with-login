@@ -2,14 +2,15 @@ from datetime import datetime
 from flask import render_template, redirect
 from flask.ext.login import login_required
 from . import main
-from .forms import BetaRegistration
+from .forms import BetaRegistration, SignIn
 from .. import db
-from ..models import BetaRequest
+from ..models import BetaRequest, User
 
 @main.route('/', methods=['GET', 'POST'])
 def index():
-    form = BetaRegistration()
-    return render_template('main/index.html', form=form)
+    register = BetaRegistration()
+    signin = SignIn()
+    return render_template('main/index.html', form=register, signin=signin)
 
 @main.route('/beta_registration', methods=['GET', 'POST'])
 def beta_registration():
@@ -29,3 +30,30 @@ def beta_registration():
 @login_required
 def secret():
     return 'Only authenticated users are allowed!'
+
+
+@main.route('/login', methods=['GET', 'POST'])
+def login():
+    user_login = SignIn()
+
+    if user_login.validate_on_submit():
+        entered_username = user_login.username.data
+        entered_password = user_login.password.data
+        try:
+            user = User.query.filter_by(username = entered_username).first()
+            if user.password == entered_password:
+                return redirect('/construct')
+        except:
+            return redirect('/')
+    return redirect('/')
+
+
+@main.route('/construct', methods=['GET', 'POST'])
+def console():
+
+    return render_template('main/construct.html', message="Welcome to the Constructor...")
+
+
+
+
+

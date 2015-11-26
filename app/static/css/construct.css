@@ -3,8 +3,7 @@
 =========================================================*/
 
 body {
-    background: #31383b;
-    background-image: url("/static/img/bg-beta.jpg");
+    background: #ffffff;
     background-repeat: repeat-x;
     -webkit-font-smoothing: antialiased;
     font-weight: normal;

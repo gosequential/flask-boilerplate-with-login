@@ -17,3 +17,13 @@ class BetaRequest(db.Model):
 #@login_manager.user_loader
 #def load_user(user_id):
 #    return User.query.get(int(user_id))
+
+# Beta Requests for Datapir
+class User(db.Model):
+    __tablename__ = "User"
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(256))
+    password = db.Column(db.String(256))
+
+    def __repr__(self):
+        return 'User: %r' % self.username
