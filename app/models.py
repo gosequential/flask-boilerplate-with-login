@@ -44,7 +44,7 @@ class CurrentWeather(db.Model):
     sunset = db.Column(db.Integer)
     latitude = db.Column(db.Float)
     longitude = db.Column(db.Float)
-    datetime = db.Column(db.DateTime, default=datetime.datetime.utcnow())
+    utc_datetime = db.Column(db.DateTime, default=datetime.datetime.utcnow())
 
     def __repr__(self):
         return 'Current Weather - %s' % self.city
