@@ -1,0 +1,40 @@
+Today
+
+    - gregmc__.com & associated works
+    - snowhero.com
+    - It's on Me treatise
+    - etl project
+    - rumbleboard => react
+    - blog posts
+    - twitter posts
+    - github activity
+    - access keyed ssh servers
+    - swift work
+
+    - rework getonroute / adaptiveplans
+    - major metro work - NYC, Toronto, LA, Mexico City, Tokyo
+    - bitcoin automated trading / predictive
+
+
+Advertising
+    - Is your business effectively utilizing data, do you want to do more with
+    - deacon James is a data engineering consultancy, we make data manageable
+    - I work at Deacon James as a project manager, lead consultant {khan?}
+    - Look for opportunities / effective use cases for data consulting (other) within businesses
+
+Personal Brand
+    - What is the message
+    - What are the goals
+    - Timeline ==> what and when?
+
+
+Where am I headed?
+Singular focus...
+Motivate, Motivation
+
+
+    1. Inject Datapir API (weather) data into Rumbleboard landing page
+    2. Extract data from LinkedIn API
+    3. Extract data from OpenTable API
+    4. Reread SA's treatise
+    5. Mockup SnowHero app

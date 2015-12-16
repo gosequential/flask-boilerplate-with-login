@@ -1,5 +1,6 @@
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask.ext.login import UserMixin, AnonymousUserMixin
+import datetime
 #from . import db, login_manager
 from . import db
 
@@ -27,3 +28,25 @@ class User(db.Model):
 
     def __repr__(self):
         return 'User: %r' % self.username
+
+# Database for the current_weather api
+class CurrentWeather(db.Model):
+    __tablename__="current_weather"
+    id = db.Column(db.Integer, primary_key=True)
+    city = db.Column(db.String(32))
+    country = db.Column(db.String(32))
+    conditions = db.Column(db.String(32))
+    temperature = db.Column(db.Float)
+    humidity = db.Column(db.Float)
+    windspeed = db.Column(db.Float)
+    wind_direction = db.Column(db.Integer)
+    sunrise = db.Column(db.Integer)
+    sunset = db.Column(db.Integer)
+    latitude = db.Column(db.Float)
+    longitude = db.Column(db.Float)
+    datetime = db.Column(db.DateTime, default=datetime.datetime.utcnow())
+
+    def __repr__(self):
+        return 'Current Weather - %s' % self.city
+
+
