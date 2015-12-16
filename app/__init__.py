@@ -2,7 +2,6 @@ from flask import Flask
 from flask.ext.mail import Mail
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.login import LoginManager
-from flask_restful import Api
 from config import config
 
 mail = Mail()
