@@ -5,7 +5,7 @@ from flask.ext.login import login_required
 from . import api  # Get the Blueprint
 from .. import db
 from ..models import BetaRequest, User, CurrentWeather
-
+from .decorators import crossdomain
 
 class CityWeather(object):
     """ Create city weather objects of current conditions """
@@ -84,6 +84,7 @@ def api_signin(uid):
     return "<p>Hello " + uid + ", your api key checks out.</p><p>Your resources are as follows...</p><p><a href='/api/enochroot/weather'>Weather</a></p>"
 
 @api.route('/weather/<string:city>', methods=['GET'])
+@crossdomain(origin='*', headers="Authorization")
 def get_weather_data(city):
     city = CityWeather('Prague')
     weather_data = city.weather_data
