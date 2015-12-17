@@ -86,7 +86,9 @@ def api_signin(uid):
 def get_weather_data(city):
     city = CityWeather('Prague')
     weather_data = city.weather_data
-    return jsonify(weather_data)
+    response = jsonify(city.weather_data)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 
 

@@ -1,7 +1,6 @@
 from flask import Flask
 from flask.ext.mail import Mail
 from flask.ext.sqlalchemy import SQLAlchemy
-from flask.ext.cors import CORS
 from flask.ext.login import LoginManager
 from config import config
 
@@ -21,7 +20,6 @@ def create_app(config_name):
     
     mail.init_app(app)
     db.init_app(app)
-    CORS(app)
 
     #login_manager.init_app(app)
     
