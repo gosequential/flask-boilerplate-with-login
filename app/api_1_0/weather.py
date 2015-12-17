@@ -84,7 +84,7 @@ def api_signin(uid):
     return "<p>Hello " + uid + ", your api key checks out.</p><p>Your resources are as follows...</p><p><a href='/api/enochroot/weather'>Weather</a></p>"
 
 @api.route('/weather/<string:city>', methods=['GET'])
-@crossdomain(origin='*', headers="Authorization")
+@crossdomain(origin='*')
 def get_weather_data(city):
     city = CityWeather('Prague')
     weather_data = city.weather_data
