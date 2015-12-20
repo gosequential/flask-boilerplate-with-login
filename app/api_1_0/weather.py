@@ -34,7 +34,7 @@ class CityWeather(object):
             "conditions": self._normalizeConditions(self._conditions), # call _normalizeConditions as a member function on the instance, self.
             "temperature_C": int(self._temperature - 273),
             "humidity": int(self._humidity),
-            "windspeed_kph": ("%.2f" % self._windspeed),
+            "windspeed_kph": ("%.1f" % self._windspeed),
             "wind_direction": self._ordinalDirection(self._wind_direction),
             "sunrise": self._time(self._sunrise),
             "sunset": self._time(self._sunset),
